@@ -27,6 +27,11 @@ value('tableOfContents', [{
     'title': 'Concurrency',
     'description': '<p>Go provides concurrency features as part of the core language.</p><p>This module goes over goroutines and channels, and how they are used to implement different concurrency patterns.</p>',
     'lessons': ['concurrency']
+}, {
+    'id': 'racedetector',
+    'title': 'Race Detector',
+    'description': '<p>Go Race Detector is key to writing threadsafe code</p><p>This module goes over the race detector</p>',
+    'lessons': ['racedetector']
 }]).
 
 // translation
