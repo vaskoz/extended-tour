@@ -214,10 +214,10 @@ ul {
 #file-menu .menu-button {
     float: right;
 }
-a#run, a#kill {
+a#run, a#runrace, a#kill, a#killrace {
     background-color: #375eab;
     color: #fff;
-    width: 40px;
+    width: 80px;
     text-align: center;
 }
 #run:hover:not(:active), #kill:hover:not(:active) {

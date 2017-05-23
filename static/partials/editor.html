@@ -36,6 +36,8 @@
                     <div class="relative-content">
                         <!--div id="file-menu" ng-controller="OutputCtrl"-->
                         <div id="file-menu">
+                            <a ng-show="racejob == null" class="menu-button" id="runrace" ng-click="runrace()">RunRace</a>
+                            <a ng-show="racejob != null" class="menu-button" id="killrace" ng-click="killrace()">KillRace</a>
                             <a ng-show="job == null" class="menu-button" id="run" ng-click="run()">Run</a>
                             <a ng-show="job != null" class="menu-button" id="kill" ng-click="kill()">Kill</a>
                             <a class="menu-button" id="format" ng-click="format()">Format</a>

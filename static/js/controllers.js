@@ -31,6 +31,7 @@ controller('EditorCtrl', ['$scope', '$routeParams', '$location', 'toc', 'i18n', 
         $scope.curPage = parseInt($routeParams.pageNumber);
         $scope.curFile = 0;
         $scope.job = null;
+        $scope.racejob = null;
 
         $scope.nextPageClick = function(event) {
             event.preventDefault();
@@ -90,8 +91,24 @@ controller('EditorCtrl', ['$scope', '$routeParams', '$location', 'toc', 'i18n', 
             });
         };
 
+        $scope.runrace = function() {
+            log('info', i18n.l('waiting'));
+            var f = file();
+            $scope.racejob = run(f.Content, $('.output.active > pre')[0], {
+                path: f.Name,
+                race: true
+            }, function() {
+                $scope.racejob = null;
+                $scope.$apply();
+            });
+        };
+
         $scope.kill = function() {
             if ($scope.job !== null) $scope.job.Kill();
+        };
+
+        $scope.killrace = function() {
+            if ($scope.racejob !== null) $scope.racejob.Kill();
         };
 
         $scope.format = function() {
