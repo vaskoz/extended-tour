@@ -5,3 +5,9 @@ This is the race detector article!
 Content from the first page
 
 .play racedetector/race1.go
+
+* Second Page
+
+Can I import other packages not in the stdlib?
+
+.play racedetector/import.go
