@@ -32,6 +32,11 @@ value('tableOfContents', [{
     'title': 'Race Detector',
     'description': '<p>Go Race Detector is key to writing threadsafe code</p><p>This module goes over the race detector</p>',
     'lessons': ['racedetector']
+}, {
+    'id': 'testing',
+    'title': 'Testing and Benchmarking in Go',
+    'description': '<p>Testing Go Code</p><p>This module goes over testing, benchmarking and code coverage in Go</p>',
+    'lessons': ['testing']
 }]).
 
 // translation

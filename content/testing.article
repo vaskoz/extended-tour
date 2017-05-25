@@ -1,0 +1,19 @@
+Testing, Benchmarking and Code Coverage
+
+* Testing
+
+Testing your code is quite easy in Go. Let's look at some examples that can be executed inside of GoTour
+
+.play testing/test.go
+
+* Benchmarking
+
+You can now benchmark that code for performance considerations of various options.
+
+.play testing/bench.go
+
+* Code Coverage
+
+How much of your code did you really verify works? Do you have dead code?
+
+.play testing/cover.go
