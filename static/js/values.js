@@ -28,15 +28,25 @@ value('tableOfContents', [{
     'description': '<p>Go provides concurrency features as part of the core language.</p><p>This module goes over goroutines and channels, and how they are used to implement different concurrency patterns.</p>',
     'lessons': ['concurrency']
 }, {
-    'id': 'racedetector',
-    'title': 'Race Detector',
-    'description': '<p>Go Race Detector is key to writing threadsafe code</p><p>This module goes over the race detector</p>',
-    'lessons': ['racedetector']
+    'id': 'microservice',
+    'title': 'Writing a new microservice',
+    'description': '<p>How to write a brand new microservice</p><p>This module goes over some best practices</p>',
+    'lessons': ['microservice']
 }, {
     'id': 'testing',
     'title': 'Testing and Benchmarking in Go',
     'description': '<p>Testing Go Code</p><p>This module goes over testing, benchmarking and code coverage in Go</p>',
     'lessons': ['testing']
+}, {
+    'id': 'racedetector',
+    'title': 'Race Detector',
+    'description': '<p>Go Race Detector is key to writing threadsafe code</p><p>This module goes over the race detector</p>',
+    'lessons': ['racedetector']
+}, {
+    'id': 'http',
+    'title': 'HTTP Services in Go',
+    'description': '<p>HTTP Services in Go</p><p>Frameworks and conventions for building HTTP endpoints in services</p>',
+    'lessons': ['http']
 }]).
 
 // translation

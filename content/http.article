@@ -1,0 +1,9 @@
+HTTP endpoints FTW!!!
+
+* What router do we use?
+
+We use github.com/julienschmidt/httprouter
+
+* Repository layout
+
+app/routes.go

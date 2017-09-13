@@ -1,0 +1,9 @@
+Microservices FTW!!!
+
+* Dependency management
+
+We use github.com/golang/dep
+
+* Repository layout
+
+github.com/organization/repo
