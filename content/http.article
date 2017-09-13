@@ -2,7 +2,15 @@ HTTP endpoints FTW!!!
 
 * What router do we use?
 
-We use github.com/julienschmidt/httprouter
+We use [[https://github.com/julienschmidt/httprouter][github.com/julienschmidt/httprouter]]
+
+Here is the trivial example of a server, you can run yourself.
+
+Start the server by clicking *Run* and then goto [[http://localhost:8080/][Index endpoint]] to see the 'Welcome!' message.
+
+Next, try the [[http://localhost:8080/hello/go%20developers][Hello endpoint with 'go developers' appended]]
+
+.play http/trivial.go
 
 * Repository layout
 
