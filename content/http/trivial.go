@@ -1,3 +1,5 @@
+// +build no-run OMIT
+
 package main
 
 import (

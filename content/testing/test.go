@@ -1,3 +1,5 @@
+// +build OMIT
+
 package main
 
 import (
@@ -9,7 +11,6 @@ import (
 	"testing"
 )
 
-// START OMIT
 func Itoa1(x int) string {
 	return fmt.Sprintf("%d", x)
 }
@@ -42,7 +43,6 @@ func TestItoa2(t *testing.T) {
 	}
 }
 
-// END OMIT
 func main() {
 	log.Println(runtime.Version())
 	flag.Set("test.bench", "anything")
