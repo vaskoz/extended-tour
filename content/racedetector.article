@@ -1,13 +1,21 @@
-This is the race detector article!
+Learn about data races and the Go runtime's race detector
 
-* First Page
+* Simple data race #1
 
-Content from the first page
+Run this code sample with both the *Run* button below as well as the *RunRace* button.
+
+** Why does the race detector see a data race?
+
+The goroutine makes no implicit guarantees on which goroutine will run at what time. Unless you explicitly synchronize to define a happens-before relationship, then no guarantee exists.
 
 .play racedetector/race1.go
 
-* Second Page
+* Simple data race #2
 
-Can I import other packages not in the stdlib?
+You can import dependencies from external sources in this Extended Go Tour.
 
 .play racedetector/import.go
+
+* Read the Go Memory Model
+
+.link https://golang.org/ref/mem Go Memory Model
