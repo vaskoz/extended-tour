@@ -43,6 +43,7 @@ func TestItoa2(t *testing.T) {
 	}
 }
 
+// You can ignore this method. It just programmatically runs the tests.
 func main() {
 	log.Println(runtime.Version())
 	flag.Set("test.bench", "anything")

@@ -43,6 +43,7 @@ func BenchmarkItoa2(b *testing.B) {
 	}
 }
 
+// You can ignore this method. It just programmatically runs the benchmarks.
 func main() {
 	log.Println(runtime.Version())
 	flag.Set("test.bench", "anything")
