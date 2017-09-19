@@ -2,8 +2,19 @@ Microservices FTW!!!
 
 * Dependency management
 
-We use github.com/golang/dep
+We use [[github.com/golang/dep]]
+
+** A little copying is better than a little dependency.
+
+For example, if you need to make a single request for data from [[https://github.com][Github]] don't import a large client library like [[https://godoc.org/github.com/google/go-github/github][Go Github API client by Google]]. This pulls in a [[https://gist.github.com/vaskoz/9506aad5b6c00bb747d99ce525615999][huge number of files]].
+
+** You are responsible for your dependencies
+
+Any code you import is *YOURS!* Don't believe any claims made by library maintainers. If you pull in a dependency, the expectation is that you vetted the code very carefully. You should be intimately familiar with the code as if you implemented it yourself. If you're unable or unwilling to understand all of the code, then don't use that dependency.
+
 
 * Repository layout
 
-github.com/organization/repo
+github.com/organization/project
+
+github.com/organization/project/cmd/executable
