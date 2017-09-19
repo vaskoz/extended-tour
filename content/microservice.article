@@ -18,3 +18,11 @@ Any code you import is *YOURS!* Don't believe any claims made by library maintai
 github.com/organization/project
 
 github.com/organization/project/cmd/executable
+
+* Graceful shutdown
+
+Your application should respond to *SIGTERM* and *SIGINT* and shutdown quickly and gracefully.
+
+Graceful shutdown also means making sure all spawned goroutines terminate and effectively "join" back to the main function.
+
+.play microservice/graceful.go
