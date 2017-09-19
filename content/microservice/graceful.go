@@ -10,11 +10,13 @@ import (
 )
 
 type Application struct {
-	ctx context.Context
+	ctx    context.Context
+	cancel context.CancelFunc
 }
 
-func (app *Application) Run(ctx context.Context) <-chan struct{} {
+func (app *Application) Run(ctx context.Context, cancel context.CancelFunc) <-chan struct{} {
 	app.ctx = ctx
+	app.cancel = cancel
 	go func() {
 		for i := 0; i < 30; i++ {
 			time.Sleep(1 * time.Second) // do some simulated work
@@ -25,6 +27,7 @@ func (app *Application) Run(ctx context.Context) <-chan struct{} {
 				log.Println("Completed iteration", i)
 			}
 		}
+		app.cancel()
 	}()
 	return ctx.Done()
 }
@@ -37,7 +40,7 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 
 	select {
-	case <-application.Run(ctx):
+	case <-application.Run(ctx, cancel):
 		log.Println("I've completed my work")
 	case <-sigChan:
 		cancel()
